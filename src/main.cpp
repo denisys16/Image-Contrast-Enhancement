@@ -95,6 +95,7 @@ int main(int argc, char** argv)
     end_time = high_resolution_clock::now();
     MyTimeOutput("SEF处理时间: ", start_time, end_time);
 
+    /*
     cv::imshow("src", src);
     cv::imshow("AINDANE_dst", AINDANE_dst);
     cv::imshow("WTHE_dst", WTHE_dst);
@@ -108,6 +109,20 @@ int main(int argc, char** argv)
     cv::imshow("adaptiveImageEnhancement_dst", adaptiveImageEnhancement_dst);
     cv::imshow("JHE_dst", JHE_dst);
     cv::imshow("SEF_dst", SEF_dst);
+    */
+    cv::imwrite("src.jpg", src);
+    cv::imwrite("AINDANE_dst.jpg", AINDANE_dst);
+    cv::imwrite("WTHE_dst.jpg", WTHE_dst);
+    cv::imwrite("GCEHistMod_dst.jpg", GCEHistMod_dst);
+    cv::imwrite("LDR_dst.jpg", LDR_dst);
+    cv::imwrite("AGCWD_dst.jpg", AGCWD_dst);
+    cv::imwrite("AGCIE_dst.jpg", AGCIE_dst);
+    cv::imwrite("IAGCWD_dst.jpg", IAGCWD_dst);
+    cv::imwrite("Ying_dst.jpg", Ying_dst);
+    cv::imwrite("CEusingLuminanceAdaptation_dst.jpg", CEusingLuminanceAdaptation_dst);
+    cv::imwrite("adaptiveImageEnhancement_dst.jpg", adaptiveImageEnhancement_dst);
+    cv::imwrite("JHE_dst.jpg", JHE_dst);
+    cv::imwrite("SEF_dst.jpg", SEF_dst);
 	
     cv::waitKey();
     return 0;
